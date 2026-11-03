@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Secrets
+.env
+
+# Local indexes and evaluation output
+chroma_db_storage/
+tree_graph_metadata/
+rag_vectorstore/
+rag_vectorstore_*/
+
+
+# OS and editors
+.DS_Store
+.idea/
+.vscode/
