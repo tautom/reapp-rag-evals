@@ -1,6 +1,6 @@
-# redfin_rag
+# redfin requirements RAG and Eval
 
-Compare indexing and retrieval techniques over a functional-requirements spec for a real estate website, then score each one on the same query set.
+Compare indexing and retrieval techniques over a functional-requirements spec for a real estate website, then run evaluations to score each one on the same query set.
 
 The spec is split two ways:
 
@@ -21,17 +21,15 @@ Retrieval is scored with precision, recall, and F1 at `k` (default 3). Queries w
 
 ## Layout
 
-Keep this directory named `redfin_rag`. Place the inputs in its parent directory:
-
 ```
 parent/
   redfin_rag/                  # this repository
   redfin_specs.md              # source document
   evaluation_tc_queries.json   # questions and gold ids
-  .env                         # API key
+  .env                         # API keys
 ```
 
-Indexes (`chroma_db_storage`, `tree_graph_metadata`, `rag_vectorstore`) and `evaluation_report.json` are written to that same parent directory. An existing Chroma or tree index there is reused. The parent-child index is built in memory on each run.
+An existing Chroma or tree index there is reused. The parent-child index is built in memory on each run.
 
 ## Setup
 
