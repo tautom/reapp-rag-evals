@@ -1,0 +1,38 @@
+[
+  {
+    "query_id": "Q1",
+    "query": "Find me All the Functional Requirements Id's associated with 'Property Search' feature",
+    "relevant_FR_ids": [
+      "FR-020",
+      "FR-021",
+      "FR-022",
+      "FR-023",
+      "FR-024"
+    ],
+    "relevant_AC_ids": [],
+    "category": "Property Search",
+    "reference_answer": "FR-020, FR-021, FR-022, FR-023, FR-024"
+  },
+  {
+    "query_id": "Q2",
+    "query": "What are all the Acceptance Criteria Id's associated with the 'Search Results' feature?",
+    "relevant_FR_ids": [],
+    "relevant_AC_ids": [
+      "AC-050.1",
+      "AC-050.2",
+      "AC-050.3",
+      "AC-051.1",
+      "AC-051.2"
+    ],
+    "category": "Search Results",
+    "reference_answer": "AC-050.1, AC-050.2, AC-050.3, AC-051.1, AC-051.2"
+  },
+  {
+    "query_id": "Q2",
+    "query": "What are the features that the Acceptance Criteria is covering related to the Property Details page",
+    "relevant_FR_ids": ["FR-060", "FR-061", "FR-062", "FR-063", "FR-064"],
+    "relevant_AC_ids": [],
+    "category": "Property Detail",
+    "reference_answer": "Property Details that are covered by the Acceptance Criteria are:Property overview, Property images, Property features, Property location, Property price, Property history"
+  }
+]

@@ -1,0 +1,547 @@
+{
+  "k": 3,
+  "queries": 3,
+  "techniques": [
+    {
+      "name": "parent_child_router",
+      "description": "LlamaIndex parent-child vector index with feature/requirement routing",
+      "precision": 1.0,
+      "recall": 0.6,
+      "f1": 0.7499999999999999,
+      "groundedness": 1.0,
+      "completeness": 0.7000000000000001,
+      "retrieval": [
+        {
+          "query_id": "Q1",
+          "question": "Find me All the Functional Requirements Id's associated with 'Property Search' feature",
+          "id_kind": "FR",
+          "relevant": [
+            "FR-020",
+            "FR-021",
+            "FR-022",
+            "FR-023",
+            "FR-024"
+          ],
+          "retrieved": [
+            "FR-020",
+            "FR-021",
+            "FR-022"
+          ],
+          "precision": 1.0,
+          "recall": 0.6,
+          "f1": 0.7499999999999999,
+          "true_positives": 3,
+          "retrieved_count": 3,
+          "relevant_count": 5
+        },
+        {
+          "query_id": "Q2",
+          "question": "What are all the Acceptance Criteria Id's associated with the 'Search Results' feature?",
+          "id_kind": "AC",
+          "relevant": [
+            "AC-050.1",
+            "AC-050.2",
+            "AC-050.3",
+            "AC-051.1",
+            "AC-051.2"
+          ],
+          "retrieved": [
+            "AC-050.1",
+            "AC-050.2",
+            "AC-050.3"
+          ],
+          "precision": 1.0,
+          "recall": 0.6,
+          "f1": 0.7499999999999999,
+          "true_positives": 3,
+          "retrieved_count": 3,
+          "relevant_count": 5
+        },
+        {
+          "query_id": "Q2",
+          "question": "What are the features that the Acceptance Criteria is covering related to the Property Details page",
+          "id_kind": "FR",
+          "relevant": [
+            "FR-060",
+            "FR-061",
+            "FR-062",
+            "FR-063",
+            "FR-064"
+          ],
+          "retrieved": [
+            "FR-060",
+            "FR-061",
+            "FR-062"
+          ],
+          "precision": 1.0,
+          "recall": 0.6,
+          "f1": 0.7499999999999999,
+          "true_positives": 3,
+          "retrieved_count": 3,
+          "relevant_count": 5
+        }
+      ],
+      "generation": [
+        {
+          "query_id": "Q1",
+          "question": "Find me All the Functional Requirements Id's associated with 'Property Search' feature",
+          "answer": "The Functional Requirements IDs associated with the 'Property Search' feature are:\n\n- FR-020\n- FR-021\n- FR-022\n- FR-023\n- FR-024",
+          "groundedness_score": 1.0,
+          "groundedness_verdict": "GROUNDED",
+          "completeness_score": 1.0,
+          "completeness_verdict": "COMPLETE"
+        },
+        {
+          "query_id": "Q2",
+          "question": "What are all the Acceptance Criteria Id's associated with the 'Search Results' feature?",
+          "answer": "The Acceptance Criteria Id's associated with the 'Search Results' feature are:\n\n- AC-050.1\n- AC-050.2\n- AC-050.3\n- AC-051.1\n- AC-051.2\n- AC-051.3\n- AC-052.1\n- AC-052.2\n- AC-052.3\n- AC-053.1\n- AC-053.2\n- AC-053.3\n- AC-054.1\n- AC-054.2\n- AC-054.3",
+          "groundedness_score": 1.0,
+          "groundedness_verdict": "GROUNDED",
+          "completeness_score": 0.3,
+          "completeness_verdict": "INCOMPLETE"
+        },
+        {
+          "query_id": "Q2",
+          "question": "What are the features that the Acceptance Criteria is covering related to the Property Details page",
+          "answer": "The features that the Acceptance Criteria is covering related to the Property Details page are:\n\n1. Property Overview\n2. Property Photographs\n3. Property Description\n4. Property Features\n5. Financial Information\n6. Property History\n7. Price Changes\n8. Listing Information",
+          "groundedness_score": 1.0,
+          "groundedness_verdict": "GROUNDED",
+          "completeness_score": 0.8,
+          "completeness_verdict": "COMPLETE"
+        }
+      ]
+    },
+    {
+      "name": "llamaindex_vector",
+      "description": "LlamaIndex VectorStoreIndex over Header-1 sections, stored in Chroma",
+      "precision": 0.6666666666666666,
+      "recall": 0.39999999999999997,
+      "f1": 0.49999999999999994,
+      "groundedness": 1.0,
+      "completeness": 0.4666666666666666,
+      "retrieval": [
+        {
+          "query_id": "Q1",
+          "question": "Find me All the Functional Requirements Id's associated with 'Property Search' feature",
+          "id_kind": "FR",
+          "relevant": [
+            "FR-020",
+            "FR-021",
+            "FR-022",
+            "FR-023",
+            "FR-024"
+          ],
+          "retrieved": [
+            "FR-024",
+            "FR-021",
+            "FR-022"
+          ],
+          "precision": 1.0,
+          "recall": 0.6,
+          "f1": 0.7499999999999999,
+          "true_positives": 3,
+          "retrieved_count": 3,
+          "relevant_count": 5
+        },
+        {
+          "query_id": "Q2",
+          "question": "What are all the Acceptance Criteria Id's associated with the 'Search Results' feature?",
+          "id_kind": "AC",
+          "relevant": [
+            "AC-050.1",
+            "AC-050.2",
+            "AC-050.3",
+            "AC-051.1",
+            "AC-051.2"
+          ],
+          "retrieved": [
+            "AC-040.1",
+            "AC-040.2",
+            "AC-040.3"
+          ],
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0,
+          "true_positives": 0,
+          "retrieved_count": 3,
+          "relevant_count": 5
+        },
+        {
+          "query_id": "Q2",
+          "question": "What are the features that the Acceptance Criteria is covering related to the Property Details page",
+          "id_kind": "FR",
+          "relevant": [
+            "FR-060",
+            "FR-061",
+            "FR-062",
+            "FR-063",
+            "FR-064"
+          ],
+          "retrieved": [
+            "FR-063",
+            "FR-062",
+            "FR-060"
+          ],
+          "precision": 1.0,
+          "recall": 0.6,
+          "f1": 0.7499999999999999,
+          "true_positives": 3,
+          "retrieved_count": 3,
+          "relevant_count": 5
+        }
+      ],
+      "generation": [
+        {
+          "query_id": "Q1",
+          "question": "Find me All the Functional Requirements Id's associated with 'Property Search' feature",
+          "answer": "The Functional Requirements Id's associated with the 'Property Search' feature are:\n\n- AC-021.1\n- AC-021.2\n- AC-021.3\n- AC-022.1\n- AC-022.2\n- AC-022.3\n- AC-022.4\n- AC-024.1\n- AC-024.2\n- AC-024.3\n- AC-024.4",
+          "groundedness_score": 1.0,
+          "groundedness_verdict": "GROUNDED",
+          "completeness_score": 0.2,
+          "completeness_verdict": "INCOMPLETE"
+        },
+        {
+          "query_id": "Q2",
+          "question": "What are all the Acceptance Criteria Id's associated with the 'Search Results' feature?",
+          "answer": "The Acceptance Criteria Id's associated with the 'Search Results' feature are AC-040.1, AC-040.2, AC-040.3, AC-040.4, AC-050.1, AC-050.2, AC-050.3, AC-011.1, AC-011.2, AC-011.3, and AC-011.4.",
+          "groundedness_score": 1.0,
+          "groundedness_verdict": "GROUNDED",
+          "completeness_score": 0.3,
+          "completeness_verdict": "INCOMPLETE"
+        },
+        {
+          "query_id": "Q2",
+          "question": "What are the features that the Acceptance Criteria is covering related to the Property Details page",
+          "answer": "The features that the Acceptance Criteria is covering related to the Property Details page include:\n\n1. Displaying available property features (AC-063.1).\n2. Grouping features into categories for user identification (AC-063.2).\n3. Not presenting unconfirmed features as verified property attributes (AC-063.3).\n4. Displaying the listing description if available (AC-062.1).\n5. Omitting or identifying unavailable descriptions (AC-062.2).\n6. Rendering descriptions with formatting legibly and safely (AC-062.3).\n7. Displaying the address, price, property type, beds, baths, and area of a valid listing (AC-060.1).\n8. Omitting or identifying unavailable fields (AC-060.2).\n9. Reflecting updated listing status or price changes (AC-060.3).",
+          "groundedness_score": 1.0,
+          "groundedness_verdict": "GROUNDED",
+          "completeness_score": 0.9,
+          "completeness_verdict": "COMPLETE"
+        }
+      ]
+    },
+    {
+      "name": "llamaindex_tree",
+      "description": "LlamaIndex TreeIndex select_leaf over Header-1 sections",
+      "precision": 0.3333333333333333,
+      "recall": 0.19999999999999998,
+      "f1": 0.24999999999999997,
+      "groundedness": 0.9333333333333332,
+      "completeness": 0.43333333333333335,
+      "retrieval": [
+        {
+          "query_id": "Q1",
+          "question": "Find me All the Functional Requirements Id's associated with 'Property Search' feature",
+          "id_kind": "FR",
+          "relevant": [
+            "FR-020",
+            "FR-021",
+            "FR-022",
+            "FR-023",
+            "FR-024"
+          ],
+          "retrieved": [
+            "FR-001",
+            "FR-003"
+          ],
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0,
+          "true_positives": 0,
+          "retrieved_count": 3,
+          "relevant_count": 5
+        },
+        {
+          "query_id": "Q2",
+          "question": "What are all the Acceptance Criteria Id's associated with the 'Search Results' feature?",
+          "id_kind": "AC",
+          "relevant": [
+            "AC-050.1",
+            "AC-050.2",
+            "AC-050.3",
+            "AC-051.1",
+            "AC-051.2"
+          ],
+          "retrieved": [
+            "AC-020.1",
+            "AC-020.2",
+            "AC-020.3"
+          ],
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0,
+          "true_positives": 0,
+          "retrieved_count": 3,
+          "relevant_count": 5
+        },
+        {
+          "query_id": "Q2",
+          "question": "What are the features that the Acceptance Criteria is covering related to the Property Details page",
+          "id_kind": "FR",
+          "relevant": [
+            "FR-060",
+            "FR-061",
+            "FR-062",
+            "FR-063",
+            "FR-064"
+          ],
+          "retrieved": [
+            "FR-060",
+            "FR-061",
+            "FR-062"
+          ],
+          "precision": 1.0,
+          "recall": 0.6,
+          "f1": 0.7499999999999999,
+          "true_positives": 3,
+          "retrieved_count": 3,
+          "relevant_count": 5
+        }
+      ],
+      "generation": [
+        {
+          "query_id": "Q1",
+          "question": "Find me All the Functional Requirements Id's associated with 'Property Search' feature",
+          "answer": "The context does not contain the specific Functional Requirements IDs associated with the 'Property Search' feature.",
+          "groundedness_score": 0.8,
+          "groundedness_verdict": "GROUNDED",
+          "completeness_score": 0.2,
+          "completeness_verdict": "INCOMPLETE"
+        },
+        {
+          "query_id": "Q2",
+          "question": "What are all the Acceptance Criteria Id's associated with the 'Search Results' feature?",
+          "answer": "The Acceptance Criteria Id's associated with the 'Search Results' feature are AC-020.1, AC-020.2, AC-020.3, AC-021.1, AC-021.2, AC-021.3, AC-022.1, AC-022.2, AC-022.3, and AC-022.4.",
+          "groundedness_score": 1.0,
+          "groundedness_verdict": "GROUNDED",
+          "completeness_score": 0.2,
+          "completeness_verdict": "INCOMPLETE"
+        },
+        {
+          "query_id": "Q2",
+          "question": "What are the features that the Acceptance Criteria is covering related to the Property Details page",
+          "answer": "The features that the Acceptance Criteria is covering related to the Property Details page include:\n\n1. Displaying available address, price, property type, beds, baths, and area (AC-060.1).\n2. Omitting or identifying unavailable fields (AC-060.2).\n3. Reflecting updated listing status or price changes (AC-060.3).\n4. Viewing available photographs (AC-061.1).\n5. Navigating between multiple photographs (AC-061.2).\n6. Displaying a fallback for photographs that fail to load (AC-061.3).\n7. Ensuring the page remains usable when no photographs are available (AC-061.4).\n8. Displaying an available listing description (AC-062.1).\n9. Not displaying an invented description when none is available (AC-062.2).\n10. Rendering descriptions with formatting legibly and safely (AC-062.3).",
+          "groundedness_score": 1.0,
+          "groundedness_verdict": "GROUNDED",
+          "completeness_score": 0.9,
+          "completeness_verdict": "COMPLETE"
+        }
+      ]
+    },
+    {
+      "name": "chroma_similarity",
+      "description": "LangChain Chroma cosine similarity over Header-1 sections",
+      "precision": 0.2222222222222222,
+      "recall": 0.13333333333333333,
+      "f1": 0.16666666666666666,
+      "groundedness": 1.0,
+      "completeness": 0.46666666666666673,
+      "retrieval": [
+        {
+          "query_id": "Q1",
+          "question": "Find me All the Functional Requirements Id's associated with 'Property Search' feature",
+          "id_kind": "FR",
+          "relevant": [
+            "FR-020",
+            "FR-021",
+            "FR-022",
+            "FR-023",
+            "FR-024"
+          ],
+          "retrieved": [
+            "FR-040",
+            "FR-043"
+          ],
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0,
+          "true_positives": 0,
+          "retrieved_count": 3,
+          "relevant_count": 5
+        },
+        {
+          "query_id": "Q2",
+          "question": "What are all the Acceptance Criteria Id's associated with the 'Search Results' feature?",
+          "id_kind": "AC",
+          "relevant": [
+            "AC-050.1",
+            "AC-050.2",
+            "AC-050.3",
+            "AC-051.1",
+            "AC-051.2"
+          ],
+          "retrieved": [
+            "AC-040.1",
+            "AC-040.2",
+            "AC-040.3"
+          ],
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0,
+          "true_positives": 0,
+          "retrieved_count": 3,
+          "relevant_count": 5
+        },
+        {
+          "query_id": "Q2",
+          "question": "What are the features that the Acceptance Criteria is covering related to the Property Details page",
+          "id_kind": "FR",
+          "relevant": [
+            "FR-060",
+            "FR-061",
+            "FR-062",
+            "FR-063",
+            "FR-064"
+          ],
+          "retrieved": [
+            "FR-063",
+            "FR-062",
+            "FR-033"
+          ],
+          "precision": 0.6666666666666666,
+          "recall": 0.4,
+          "f1": 0.5,
+          "true_positives": 2,
+          "retrieved_count": 3,
+          "relevant_count": 5
+        }
+      ],
+      "generation": [
+        {
+          "query_id": "Q1",
+          "question": "Find me All the Functional Requirements Id's associated with 'Property Search' feature",
+          "answer": "The context does not contain the answer to the question regarding the Functional Requirements Id's associated with the 'Property Search' feature.",
+          "groundedness_score": 1.0,
+          "groundedness_verdict": "GROUNDED",
+          "completeness_score": 0.2,
+          "completeness_verdict": "INCOMPLETE"
+        },
+        {
+          "query_id": "Q2",
+          "question": "What are all the Acceptance Criteria Id's associated with the 'Search Results' feature?",
+          "answer": "The Acceptance Criteria Id's associated with the 'Search Results' feature are AC-040.1, AC-040.2, AC-040.3, AC-040.4, AC-351.1, AC-351.2, AC-351.3, AC-050.1, AC-050.2, and AC-050.3.",
+          "groundedness_score": 1.0,
+          "groundedness_verdict": "GROUNDED",
+          "completeness_score": 0.4,
+          "completeness_verdict": "PARTIAL"
+        },
+        {
+          "query_id": "Q2",
+          "question": "What are the features that the Acceptance Criteria is covering related to the Property Details page",
+          "answer": "The features that the Acceptance Criteria is covering related to the Property Details page include:\n\n1. Displaying available property features (AC-063.1).\n2. Grouping features into categories for user identification (AC-063.2).\n3. Not presenting unconfirmed features as verified property attributes (AC-063.3).\n4. Displaying the listing description if available (AC-062.1).\n5. Not displaying an invented description if none is available (AC-062.2).\n6. Rendering the description legibly and safely if it contains formatting (AC-062.3).",
+          "groundedness_score": 1.0,
+          "groundedness_verdict": "GROUNDED",
+          "completeness_score": 0.8,
+          "completeness_verdict": "COMPLETE"
+        }
+      ]
+    },
+    {
+      "name": "chroma_mmr",
+      "description": "LangChain Chroma maximal marginal relevance over Header-1 sections",
+      "precision": 0.1111111111111111,
+      "recall": 0.06666666666666667,
+      "f1": 0.08333333333333333,
+      "groundedness": 1.0,
+      "completeness": 0.3333333333333333,
+      "retrieval": [
+        {
+          "query_id": "Q1",
+          "question": "Find me All the Functional Requirements Id's associated with 'Property Search' feature",
+          "id_kind": "FR",
+          "relevant": [
+            "FR-020",
+            "FR-021",
+            "FR-022",
+            "FR-023",
+            "FR-024"
+          ],
+          "retrieved": [
+            "FR-040"
+          ],
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0,
+          "true_positives": 0,
+          "retrieved_count": 3,
+          "relevant_count": 5
+        },
+        {
+          "query_id": "Q2",
+          "question": "What are all the Acceptance Criteria Id's associated with the 'Search Results' feature?",
+          "id_kind": "AC",
+          "relevant": [
+            "AC-050.1",
+            "AC-050.2",
+            "AC-050.3",
+            "AC-051.1",
+            "AC-051.2"
+          ],
+          "retrieved": [
+            "AC-040.1",
+            "AC-040.2",
+            "AC-040.3"
+          ],
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0,
+          "true_positives": 0,
+          "retrieved_count": 3,
+          "relevant_count": 5
+        },
+        {
+          "query_id": "Q2",
+          "question": "What are the features that the Acceptance Criteria is covering related to the Property Details page",
+          "id_kind": "FR",
+          "relevant": [
+            "FR-060",
+            "FR-061",
+            "FR-062",
+            "FR-063",
+            "FR-064"
+          ],
+          "retrieved": [
+            "FR-063",
+            "FR-033",
+            "FR-005"
+          ],
+          "precision": 0.3333333333333333,
+          "recall": 0.2,
+          "f1": 0.25,
+          "true_positives": 1,
+          "retrieved_count": 3,
+          "relevant_count": 5
+        }
+      ],
+      "generation": [
+        {
+          "query_id": "Q1",
+          "question": "Find me All the Functional Requirements Id's associated with 'Property Search' feature",
+          "answer": "The context does not contain the answer to the question regarding the Functional Requirements Id's associated with the 'Property Search' feature.",
+          "groundedness_score": 1.0,
+          "groundedness_verdict": "GROUNDED",
+          "completeness_score": 0.2,
+          "completeness_verdict": "INCOMPLETE"
+        },
+        {
+          "query_id": "Q2",
+          "question": "What are all the Acceptance Criteria Id's associated with the 'Search Results' feature?",
+          "answer": "The Acceptance Criteria Id's associated with the 'Search Results' feature are AC-040.1, AC-040.2, AC-040.3, AC-040.4, AC-034.1, AC-034.2, AC-034.3, AC-201.1, AC-201.2, and AC-201.3.",
+          "groundedness_score": 1.0,
+          "groundedness_verdict": "GROUNDED",
+          "completeness_score": 0.2,
+          "completeness_verdict": "INCOMPLETE"
+        },
+        {
+          "query_id": "Q2",
+          "question": "What are the features that the Acceptance Criteria is covering related to the Property Details page",
+          "answer": "The features that the Acceptance Criteria is covering related to the Property Details page are:\n\n1. Displaying available property features (AC-063.1).\n2. Grouping features into categories for user identification (AC-063.2).\n3. Not presenting unconfirmed features as verified property attributes (AC-063.3).",
+          "groundedness_score": 1.0,
+          "groundedness_verdict": "GROUNDED",
+          "completeness_score": 0.6,
+          "completeness_verdict": "PARTIAL"
+        }
+      ]
+    }
+  ]
+}
