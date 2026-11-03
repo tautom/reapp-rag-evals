@@ -1,4 +1,4 @@
-# redfin requirements RAG and Eval
+#RAG and Evaluations. 
 
 Compare indexing and retrieval techniques over a functional-requirements spec for a real estate website, then run evaluations to score each one on the same query set.
 
